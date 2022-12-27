@@ -1,0 +1,16 @@
+@import '../../styles/globals.scss';
+
+.temperature {
+    color: $--text-color;
+    display: flex;
+    
+    &__figure {
+        font-weight: 100;
+        font-size: 164px;
+    }
+
+    &__symbol {
+        font-size: 70px;
+        font-weight: 300;
+    }
+}
