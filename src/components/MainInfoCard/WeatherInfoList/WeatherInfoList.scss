@@ -1,0 +1,20 @@
+@import '../../../styles/globals.scss';
+
+.weather-info__wrapper {
+    font-size: 16px;
+    color: $--text-color;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;
+
+    .weather-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #humidity, #rain {
+       border-left: 1px solid $--text-color;
+    }
+}

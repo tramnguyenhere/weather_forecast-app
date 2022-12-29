@@ -1,0 +1,9 @@
+@import '../../styles/globals.scss';
+
+.main-info__wrapper {
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px 40px;
+}

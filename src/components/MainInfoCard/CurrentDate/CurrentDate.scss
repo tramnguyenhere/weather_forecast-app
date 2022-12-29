@@ -1,0 +1,23 @@
+@import '../../../styles/globals.scss';
+
+.date__container {
+    color: $--text-color;
+
+    .date {
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    .day-time {
+        font-weight: 300;
+        justify-content: space-between;
+        align-items: baseline;
+        .day {
+            font-size: 40px;
+        }
+
+        .time {
+            font-size: 50px;
+        }
+    }
+}
