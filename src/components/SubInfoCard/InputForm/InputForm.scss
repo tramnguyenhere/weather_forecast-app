@@ -1,0 +1,36 @@
+@import '../../../styles/globals.scss';
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    &__icon {
+        color: $--text-color;
+        font-size: 44px;
+        padding-right: 10px
+    }
+
+    &__input {
+        background: transparent;
+        border: none;
+
+        &::placeholder {
+            font-size: 32px;
+            font-family: 'Roboto', sans-serif;
+            color: $--text-color;
+            font-weight: 300;
+        }
+        
+    }
+
+    &__btn {
+        height: 59px;
+        width: 59px;
+        font-size: 35px;
+        color: $--text-color;
+        margin-left: 10px;
+        border-radius: 20px !important;
+        background: linear-gradient(116.79deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 99.45%);
+        backdrop-filter: blur(50px);
+    
+    }
+}

@@ -1,9 +1,13 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
+import './SubInfoCard.scss'
+import InputForm from './InputForm/InputForm'
 
 const SubInfoCard = () => {
     return (
-        <Col lg='5'>SubInfoCard</Col>
+      <Col className='sub-info__wrapper' lg='5'>
+        <Row><InputForm /></Row>
+      </Col>
   )
 }
 
