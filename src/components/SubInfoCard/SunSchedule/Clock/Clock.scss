@@ -1,0 +1,68 @@
+.clock {
+    .clock__wrapper {
+        overflow: hidden;
+        position: relative;
+        width: 100px;
+        height: 100px;
+
+        .clock__hour, .clock__minute {
+            position: absolute;
+            height: 30px;
+            width: 5px;
+            margin: auto;
+            bottom: 0;
+            right: 0;
+            background: #0038FF;
+            transform-origin: bottom center;
+            transform: rotate(0deg);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            padding: 0;
+        }
+    
+        .clock__minute {
+            position: absolute;
+            height: 35px;
+            width: 3px;
+            top: -38%;
+            left: 0;
+            background: #4F4F4F;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+            transform: rotate(90deg);
+        }
+    
+        .clock__second {
+            position: absolute;
+            height: 45px;
+            width: 1px;
+            margin: auto;
+            top: -26%;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 4px;
+            background: #FF0000;
+            transform-origin: bottom center;
+            transform: rotate(180deg);
+            z-index: 1;
+            padding: 0;
+        }
+    
+        .clock__dot {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            border-radius: 100%;
+            background: white;
+            margin: auto;
+            z-index: 1;
+        }
+    }
+
+
+}
