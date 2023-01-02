@@ -1,0 +1,26 @@
+@import '../../../styles/globals.scss';
+
+.weather-info__wrapper {
+    flex-wrap: wrap;
+
+    .weather-info__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        font-size: 30px;
+        text-align: center;
+
+        &--header {
+            font-weight: 200;
+        }
+
+        &--data {
+            font-weight: 400;
+        }
+        
+        &--desc {
+            font-size: 20px;
+        }
+    }
+}

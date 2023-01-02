@@ -1,4 +1,11 @@
+@import '../../../../styles/globals.scss';
+
 .clock {
+    color: $--text-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .clock__wrapper {
         overflow: hidden;
         position: relative;
@@ -12,6 +19,8 @@
             margin: auto;
             bottom: 0;
             right: 0;
+            left: 0;
+            top: -29%;
             background: #0038FF;
             transform-origin: bottom center;
             transform: rotate(0deg);
@@ -36,7 +45,7 @@
             height: 45px;
             width: 1px;
             margin: auto;
-            top: -26%;
+            top: -32%;
             left: 0;
             bottom: 0;
             right: 0;
@@ -54,14 +63,19 @@
             left: 0;
             right: 0;
             bottom: 0;
-            width: 10px;
-            height: 10px;
+            width: 9px;
+            height: 9px;
             padding: 0;
             border-radius: 100%;
             background: white;
             margin: auto;
             z-index: 1;
         }
+    }
+
+    .digital-clock__wrapper {
+        margin-top: 40px;
+        font-size: 28px;
     }
 
 

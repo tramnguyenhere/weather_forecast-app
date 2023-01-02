@@ -4,7 +4,6 @@ import './Clock.scss'
 
 const Clock = () => {
 
-
   return (
       <Container className='clock'>
         <Row className="clock__wrapper">
@@ -12,6 +11,9 @@ const Clock = () => {
             <span className="clock__minute"></span>
             <span className="clock__second"></span>
             <span className="clock__dot"></span>
+        </Row>
+        <Row className='digital-clock__wrapper'>
+            7:30 AM
         </Row>
     </Container>
   )

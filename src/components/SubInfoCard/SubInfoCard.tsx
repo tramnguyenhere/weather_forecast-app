@@ -3,6 +3,7 @@ import { Col, Row } from 'react-bootstrap'
 import './SubInfoCard.scss'
 import InputForm from './InputForm/InputForm'
 import SunSchedule from './SunSchedule/SunSchedule'
+import WeatherInfoList from './WeatherInfoList/WeatherInfoList'
 
 const SubInfoCard = () => {
     return (
@@ -14,6 +15,8 @@ const SubInfoCard = () => {
           <Col lg='6'><SunSchedule /></Col>
           <Col lg='6'><SunSchedule /></Col>
         </Row>
+        <Row className='sub-info__divider'></Row>
+        <WeatherInfoList />
       </Col>
   )
 }
