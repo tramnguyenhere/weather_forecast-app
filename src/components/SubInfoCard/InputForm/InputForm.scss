@@ -3,6 +3,7 @@
 .search-bar {
     display: flex;
     align-items: center;
+    
     &__icon {
         color: $--text-color;
         font-size: 44px;
@@ -10,15 +11,27 @@
     }
 
     &__input {
-        background: transparent;
-        border: none;
-
+        background: transparent !important;
+        border: none !important;
+        font-size: 32px !important;
+        font-family: 'Roboto', sans-serif;
+        color: $--text-color !important;
+        font-weight: 300;
+        
         &::placeholder {
             font-size: 32px;
             font-family: 'Roboto', sans-serif;
-            color: $--text-color;
+            color: $--text-color !important;
             font-weight: 300;
         }
+
+        &:focus, &:focus-visible, &:active {
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 32px;
+        }
+        
     }
 
     &__btn {

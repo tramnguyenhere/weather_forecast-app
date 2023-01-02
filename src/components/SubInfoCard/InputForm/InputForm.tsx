@@ -1,16 +1,27 @@
 import React from 'react'
 import './InputForm.scss'
-import { Button, Form, InputGroup} from 'react-bootstrap'
+import { Button, Form} from 'react-bootstrap'
+import { useAppDispatch } from '../../../redux/hooks'
+import { setLocation } from '../../../redux/features/weatherSlice'
 
 const InputForm = () => {
+  const dispatch = useAppDispatch()
+  
+  const queryHandler = (e:any) => {
+    e.preventDefault()
+    dispatch(setLocation(e.target.searchQuery.value))
+  }
+
   return (
-    <InputGroup className='search-bar'>
-        <Form.Label className='search-bar__icon'>
-        <i className="fa-solid fa-location-dot"></i>
-        </Form.Label>
-        <Form.Control className='search-bar__input' type="text" placeholder="Location" />
-       <Button className='search-bar__btn'><i className="fa-solid fa-plus"></i></Button>
-    </InputGroup>
+    <Form className='search-bar' onSubmit={queryHandler}>
+      <Form.Label className='search-bar__icon'>
+        <i className="fa-solid fa-location-dot" />
+      </Form.Label>
+      <Form.Control className='search-bar__input' name='searchQuery' type="text" placeholder="Location" />
+      <Button type='submit' className='search-bar__btn'>
+        <i className="fa-solid fa-plus" />
+      </Button>
+    </Form>
   )
 }
 

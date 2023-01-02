@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap'
 import './CurrentDate.scss'
 
 const CurrentDate = () => {
+  
     const date = format(new Date(), 'do MMM yy')
     const dayOfWeek = format(new Date(), 'eeee')
     const localizedTime = format(new Date(), 'p')
