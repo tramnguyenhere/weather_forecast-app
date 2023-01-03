@@ -4,7 +4,7 @@ import CurrentWeather from './CurrentWeather/CurrentWeather'
 import CurrentTemperature from './CurrentTemperature/CurrentTemperature'
 import CurrentDate from './CurrentDate/CurrentDate'
 import WeatherInfoList from './WeatherInfoList/WeatherInfoList'
-import FutureWeatherList from './FutureWeatherList/FutureWeatherList'
+// import FutureWeatherList from './FutureWeatherList/FutureWeatherList'
 import './MainInfoCard.scss'
 import { useAppSelector } from '../../redux/hooks'
 import { RootState } from '../../types/types'
@@ -18,7 +18,7 @@ function MainInfoCard() {
       <Row><CurrentTemperature /></Row>
       <Row><CurrentDate /></Row>
       <Row><WeatherInfoList /></Row>
-      <Row><FutureWeatherList /></Row>
+      {/* <Row><FutureWeatherList /></Row> */} 
     </Col>
   )
 }

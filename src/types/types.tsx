@@ -1,7 +1,12 @@
 import { store } from "../redux/store"
 
+
 export interface WeatherDataType {
     location: string,
+    astronomy: {
+        sunrise: string,
+        sunset: string
+      },
     weather: {
         current: {
             tempC: number,
@@ -10,7 +15,8 @@ export interface WeatherDataType {
             humidity: number,
             uv: number,
             airQuality: number
-        }
+        },
+        
     }
 }
 

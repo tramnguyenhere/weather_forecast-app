@@ -1,13 +1,13 @@
 import React from 'react'
-import format from 'date-fns/format'
 import { Container, Row, Col } from 'react-bootstrap'
 import './CurrentDate.scss'
+import { dayOfWeekConverter, fullDateConverter, timeConverter } from '../../../utils/dateUtils'
 
 const CurrentDate = () => {
   
-    const date = format(new Date(), 'do MMM yy')
-    const dayOfWeek = format(new Date(), 'eeee')
-    const localizedTime = format(new Date(), 'p')
+    const date = fullDateConverter(new Date())
+    const dayOfWeek = dayOfWeekConverter(new Date())
+    const localizedTime = timeConverter(new Date())
 
   return (
       <Container className='date__container'>

@@ -8,18 +8,36 @@ import { useAppDispatch, useAppSelector } from './redux/hooks';
 import { Container, Row } from 'react-bootstrap';
 import './styles/App.scss';
 
-import { setWeather } from './redux/features/weatherSlice';
+import { setAstronomy, setWeather } from './redux/features/weatherSlice';
 
 const App = () => {
+ 
   const location = useAppSelector((state:RootState) =>state.weather.location)
+
+  
   const dispatch = useAppDispatch()
   
   useEffect(() => {
-    const fetchData = async () => {
+  
+    const fetchAstroData = async () => {
+      try {
+        const response = await fetch(`https://api.weatherapi.com/v1/astronomy.json?key=675f6536a788401598f195901230201&q=${location}&aqi=yes`)
+        const data = await response.json()
+        
+        dispatch(setAstronomy({
+          sunrise: data.astronomy.astro.sunrise,
+          sunset: data.astronomy.astro.sunset,
+        }))
+        
+    
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    const fetchWeatherData = async () => {
       try {
         const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=675f6536a788401598f195901230201&q=${location}&aqi=yes`)
         const data = await response.json()
-        console.log(data);
         
         dispatch(setWeather(
           {
@@ -36,7 +54,8 @@ const App = () => {
         console.log(error);
       }
     }
-    fetchData()
+    fetchAstroData()
+    fetchWeatherData()
   }, [dispatch, location])
 
   return (

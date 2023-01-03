@@ -8,7 +8,7 @@ import { conditionData } from '../../../data/conditionData'
 const CurrentWeather = () => {
   const condition = useAppSelector((state: RootState) => state.weather.weather.current.condition).toLowerCase();
   const conditionIconCode = conditionData.find(item=>item.name===condition)?.imgSrc
-  console.log(condition, conditionIconCode);
+
   
   return (
      <Image className='current-weather__icon' src={`/assets/icons/${conditionIconCode}.png`} />
