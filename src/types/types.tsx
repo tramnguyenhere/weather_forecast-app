@@ -1,6 +1,6 @@
 import { store } from "../redux/store"
 
-export interface WeatherData {
+export interface WeatherDataType {
     location: string,
     weather: {
         current: {
@@ -12,6 +12,11 @@ export interface WeatherData {
             airQuality: number
         }
     }
+}
+
+export type conditionDataType = {
+    imgSrc: string,
+    name: string
 }
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

@@ -6,4 +6,10 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 40px !important;
+
+    .main-info--location {
+        font-size: 40px;
+        font-weight: 600;
+        color: $--text-color;
+    }
 }

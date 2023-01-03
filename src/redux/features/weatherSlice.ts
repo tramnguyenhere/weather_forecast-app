@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { WeatherData } from '../../types/types';
+import { WeatherDataType } from '../../types/types';
 
-const initialState: WeatherData = {
-  location: '',
+const initialState: WeatherDataType = {
+  location: 'Helsinki',
   weather: {
     current: {
       tempC: 0,
@@ -30,3 +30,4 @@ export const weatherSlice = createSlice({
 
 export const { setWeather, setLocation } = weatherSlice.actions;
 export default weatherSlice.reducer
+

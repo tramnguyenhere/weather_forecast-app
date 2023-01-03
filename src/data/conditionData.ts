@@ -1,4 +1,6 @@
-export const conditionData = [
+import { conditionDataType } from "../types/types";
+
+export const conditionData: conditionDataType[] = [
     {
         imgSrc: "partly-sunny", 
         name: 'partly sunny'
